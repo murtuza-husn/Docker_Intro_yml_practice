@@ -1,0 +1,418 @@
+MAC-BGITTNGER:Projects-Assignments mhussain$ ls
+assignment-3-intro-to-docker-c0950760
+MAC-BGITTNGER:Projects-Assignments mhussain$ cd assignment-3-intro-to-docker-c0950760/
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ git branch
+* main
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ ls
+README.md
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker pull busybox
+Using default tag: latest
+latest: Pulling from library/busybox
+e59838ecfec5: Pull complete 
+Digest: sha256:e3652a00a2fabd16ce889f0aa32c38eec347b997e73bd09e69c962ec7f8732ee
+Status: Downloaded newer image for busybox:latest
+docker.io/library/busybox:latest
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker images
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+hello-world   latest    56433a6be3fd   3 months ago    20.3kB
+busybox       latest    e3652a00a2fa   13 months ago   6.78MB
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker info
+Client:
+ Version:    28.5.1
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.9.11
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-ai
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.29.1-desktop.1
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.40.3-desktop.1
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-compose
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.45
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-debug
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.2.0
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-desktop
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-extension
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-init
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.26.0
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-mcp
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.5.10
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-offload
+  sandbox: Docker Sandbox (Docker Inc.)
+    Version:  v0.5.0
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-sandbox
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-sbom
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.18.3
+    Path:     /Users/mhussain/.docker/cli-plugins/docker-scout
+
+Server:
+ Containers: 1
+  Running: 0
+  Paused: 0
+  Stopped: 1
+ Images: 2
+ Server Version: 28.5.1
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 05044ec0a9a75232cad458027ca83437aae3f4da
+ runc version: v1.2.5-0-g59923ef
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.11.11-linuxkit
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 8
+ Total Memory: 7.656GiB
+ Name: docker-desktop
+ ID: ed2bd617-4555-4e05-a4ce-86412db3aa5d
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=unix:///Users/mhussain/Library/Containers/com.docker.docker/Data/docker-cli.sock
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker run busybox echo "Hello LuluSheng! This is a testfile to showcase that the text is running inside the busybox container"
+Hello LuluSheng! This is a testfile to showcase that the text is running inside the busybox container
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS                      PORTS     NAMES
+84f032019f03   busybox       "echo 'Hello LuluShe…"   2 minutes ago    Exited (0) 2 minutes ago              priceless_diffie
+504883bd09df   hello-world   "/hello"                 38 minutes ago   Exited (0) 38 minutes ago             ecstatic_hofstadter
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps busybox
+docker: 'docker ps' accepts no arguments
+
+Usage:  docker ps [OPTIONS]
+
+Run 'docker ps --help' for more information
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps --help
+Usage:  docker ps [OPTIONS]
+
+List containers
+
+Aliases:
+  docker container ls, docker container list, docker container ps, docker ps
+
+Options:
+  -a, --all             Show all containers (default shows just running)
+  -f, --filter filter   Filter output based on conditions provided
+      --format string   Format output using a custom template:
+                        'table':            Print output in table format with column headers (default)
+                        'table TEMPLATE':   Print output in table format using the given Go template
+                        'json':             Print in JSON format
+                        'TEMPLATE':         Print output using the given Go template.
+                        Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with
+                        templates
+  -n, --last int        Show n last created containers (includes all states) (default -1)
+  -l, --latest          Show the latest created container (includes all states)
+      --no-trunc        Don't truncate output
+  -q, --quiet           Only display container IDs
+  -s, --size            Display total file sizes
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps -s
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES     SIZE
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps -sa
+CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS                      PORTS     NAMES                 SIZE
+84f032019f03   busybox       "echo 'Hello LuluShe…"   4 minutes ago    Exited (0) 4 minutes ago              priceless_diffie      4.1kB (virtual 4.6MB)
+504883bd09df   hello-world   "/hello"                 40 minutes ago   Exited (0) 40 minutes ago             ecstatic_hofstadter   4.1kB (virtual 49.2kB)
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps -lsa
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES              SIZE
+84f032019f03   busybox   "echo 'Hello LuluShe…"   4 minutes ago   Exited (0) 4 minutes ago             priceless_diffie   4.1kB (virtual 4.6MB)
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker run -it busybox sh
+/ # ls
+bin    dev    etc    home   lib    lib64  proc   root   sys    tmp    usr    var
+/ # cd home
+/home # ls
+/home # pwd
+/home
+/home # mkdir test
+/home # echo "This is running inside BusyBox that we are currently running"
+This is running inside BusyBox that we are currently running
+/home # exit
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ # To remove the docker containers.
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED             STATUS                      PORTS     NAMES
+dfe2564fb08d   busybox       "sh"                     14 minutes ago      Exited (0) 5 minutes ago              compassionate_jepsen
+84f032019f03   busybox       "echo 'Hello LuluShe…"   26 minutes ago      Exited (0) 17 minutes ago             priceless_diffie
+504883bd09df   hello-world   "/hello"                 About an hour ago   Exited (0) 53 minutes ago             ecstatic_hofstadter
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker rm dfe2564fb08d  84f032019f03 
+dfe2564fb08d
+84f032019f03
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED             STATUS                         PORTS     NAMES
+504883bd09df   hello-world   "/hello"   About an hour ago   Exited (0) About an hour ago             ecstatic_hofstadter
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ #creating the project structure.
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ mkdir Dockerfile_project
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ mkdir html
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ cd html
+MAC-BGITTNGER:html mhussain$ vi index.html
+MAC-BGITTNGER:html mhussain$ vi index.html
+MAC-BGITTNGER:html mhussain$ cat index.html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>CSD-4503 DevOps</h1>
+    <p>Example HTML page by <strong>YourFirstName YourLastName</strong></p>
+  </body>
+</html>
+
+MAC-BGITTNGER:html mhussain$ cd ..
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ rm Dockerfile_project/
+rm: Dockerfile_project/: is a directory
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ ls
+Dockerfile_project	html			README.md
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ rmdir Dockerfile_project/
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ ls
+html		README.md
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ vi Dockerfile
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ ls
+Dockerfile	html		README.md
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ cat Dockerfile 
+# Use official Nginx image as the base
+FROM nginx:latest
+
+# Copy your custom HTML files to the directory Nginx serves from
+COPY html /usr/share/nginx/html
+
+# Expose port 80 for web traffic
+EXPOSE 80
+
+# The default command that runs Nginx in the foreground
+CMD ["nginx", "-g", "daemon off;"]
+
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ ls
+Dockerfile	html		README.md
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ cd html/
+MAC-BGITTNGER:html mhussain$ ls
+index.html
+MAC-BGITTNGER:html mhussain$ vi index.html
+MAC-BGITTNGER:html mhussain$ 
+MAC-BGITTNGER:html mhussain$ 
+MAC-BGITTNGER:html mhussain$ cat index.html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>CSD-4503 DevOps</h1>
+    <p>Example HTML page by <strong>Murtuza Hussain Mohammed</strong></p>
+  </body>
+</html>
+
+MAC-BGITTNGER:html mhussain$ 
+MAC-BGITTNGER:html mhussain$ 
+MAC-BGITTNGER:html mhussain$ 
+MAC-BGITTNGER:html mhussain$ 
+MAC-BGITTNGER:html mhussain$ cd ..
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker build -t my-nginx-image .
+[+] Building 5.2s (7/7) FINISHED                                                                                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                                   0.0s
+ => => transferring dockerfile: 331B                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest                                                                        1.3s
+ => [internal] load .dockerignore                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                        0.0s
+ => [internal] load build context                                                                                                      0.0s
+ => => transferring context: 226B                                                                                                      0.0s
+ => [1/2] FROM docker.io/library/nginx:latest@sha256:1beed3ca46acebe9d3fb62e9067f03d05d5bfa97a00f30938a0a3580563272ad                  3.3s
+ => => resolve docker.io/library/nginx:latest@sha256:1beed3ca46acebe9d3fb62e9067f03d05d5bfa97a00f30938a0a3580563272ad                  0.0s
+ => => sha256:e2f8e296d9df1dd5e2ddc81e5e758f9762fdb932e982ac6873e36692c3e3c983 1.40kB / 1.40kB                                         0.2s
+ => => sha256:52bc359bcbd74bb3d11b94cf3c6d94bcf9bd2d3e450483fb978124ceddb9ca57 1.21kB / 1.21kB                                         0.2s
+ => => sha256:9def903993e4ef9a3faa02bb893b0382768a4d466d51247bff1ea80b119377a1 404B / 404B                                             0.3s
+ => => sha256:d921c57c6a81addac6ca451906699ca6ee8c01fd708805a928181c5370b0a30c 956B / 956B                                             0.3s
+ => => sha256:320b0949be89766f7c6a8746f1971021a8e8c84928af00454c0f9c6e38ebf54c 628B / 628B                                             0.2s
+ => => sha256:266626526d42cf7fe5f56b933db3f4c59c0596b7e2c3a556ba5ec4981daf3e9d 29.97MB / 29.97MB                                       1.2s
+ => => sha256:d7ecded7702a5dbf6d0f79a71edc34b534d08f3051980e2c948fba72db3197fc 29.78MB / 29.78MB                                       1.1s
+ => => extracting sha256:d7ecded7702a5dbf6d0f79a71edc34b534d08f3051980e2c948fba72db3197fc                                              1.0s
+ => => extracting sha256:266626526d42cf7fe5f56b933db3f4c59c0596b7e2c3a556ba5ec4981daf3e9d                                              0.7s
+ => => extracting sha256:320b0949be89766f7c6a8746f1971021a8e8c84928af00454c0f9c6e38ebf54c                                              0.0s
+ => => extracting sha256:d921c57c6a81addac6ca451906699ca6ee8c01fd708805a928181c5370b0a30c                                              0.0s
+ => => extracting sha256:9def903993e4ef9a3faa02bb893b0382768a4d466d51247bff1ea80b119377a1                                              0.0s
+ => => extracting sha256:52bc359bcbd74bb3d11b94cf3c6d94bcf9bd2d3e450483fb978124ceddb9ca57                                              0.0s
+ => => extracting sha256:e2f8e296d9df1dd5e2ddc81e5e758f9762fdb932e982ac6873e36692c3e3c983                                              0.0s
+ => [2/2] COPY html /usr/share/nginx/html                                                                                              0.2s
+ => exporting to image                                                                                                                 0.2s
+ => => exporting layers                                                                                                                0.1s
+ => => exporting manifest sha256:389f695d4b948f56e89caea2ba145ea47a32386cdda72a19057d3742c77432d5                                      0.0s
+ => => exporting config sha256:de5e0de16ce7208e2a250eb068367ab3e3d120545d9d3938e2eeaf46f35f3c53                                        0.0s
+ => => exporting attestation manifest sha256:aac0b63a1e8a048f6c28b40b1747bf743cfc660d50aa3fc30f34bc622592364b                          0.0s
+ => => exporting manifest list sha256:0704f0d08dc2ea6cc5f1ffe87a940c230f5f47cef7c07bae6cd28939197f6eb6                                 0.0s
+ => => naming to docker.io/library/my-nginx-image:latest                                                                               0.0s
+ => => unpacking to docker.io/library/my-nginx-image:latest                                                                            0.0s
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker run -d --rm -p 8080:80 --name my-nginx-server my-nginx-image
+47d168438cf9fbca915b991290527e8fd6699fff5531aba8adca11e81fa16bd5
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps
+CONTAINER ID   IMAGE            COMMAND                  CREATED         STATUS         PORTS                                     NAMES
+47d168438cf9   my-nginx-image   "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-nginx-server
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker exec -it my-nginx-server sh
+# 
+# ls /usr/share/nginx/html
+cat /usr/share/nginx/html/index.html
+50x.html  index.html
+# <!DOCTYPE html>
+<html>
+  <body>
+    <h1>CSD-4503 DevOps</h1>
+    <p>Example HTML page by <strong>Murtuza Hussain Mohammed</strong></p>
+  </body>
+</html>
+
+# 
+# exit
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker stop my-nginx-server
+my-nginx-server
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker build -t my-nginx-image .
+[+] Building 0.8s (7/7) FINISHED                                                                                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                                   0.0s
+ => => transferring dockerfile: 331B                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest                                                                        0.6s
+ => [internal] load .dockerignore                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                        0.0s
+ => [1/2] FROM docker.io/library/nginx:latest@sha256:1beed3ca46acebe9d3fb62e9067f03d05d5bfa97a00f30938a0a3580563272ad                  0.0s
+ => => resolve docker.io/library/nginx:latest@sha256:1beed3ca46acebe9d3fb62e9067f03d05d5bfa97a00f30938a0a3580563272ad                  0.0s
+ => [internal] load build context                                                                                                      0.0s
+ => => transferring context: 61B                                                                                                       0.0s
+ => CACHED [2/2] COPY html /usr/share/nginx/html                                                                                       0.0s
+ => exporting to image                                                                                                                 0.1s
+ => => exporting layers                                                                                                                0.0s
+ => => exporting manifest sha256:389f695d4b948f56e89caea2ba145ea47a32386cdda72a19057d3742c77432d5                                      0.0s
+ => => exporting config sha256:de5e0de16ce7208e2a250eb068367ab3e3d120545d9d3938e2eeaf46f35f3c53                                        0.0s
+ => => exporting attestation manifest sha256:2adbcbdc5e28555a7174c9af0c39adc8ba91575606b9ee0373aaf97a76a5ae47                          0.0s
+ => => exporting manifest list sha256:e500b11e70c276d9aa1c25aa446d6902d2504242e59bf78a89abe675b3ba3760                                 0.0s
+ => => naming to docker.io/library/my-nginx-image:latest                                                                               0.0s
+ => => unpacking to docker.io/library/my-nginx-image:latest                                                                            0.0s
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED       STATUS                   PORTS     NAMES
+504883bd09df   hello-world   "/hello"   2 hours ago   Exited (0) 2 hours ago             ecstatic_hofstadter
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ cd ..
+MAC-BGITTNGER:Projects-Assignments mhussain$ ls
+assignment-3-intro-to-docker-c0950760
+MAC-BGITTNGER:Projects-Assignments mhussain$ cd ..
+MAC-BGITTNGER:DevOps mhussain$ ls
+Projects-Assignments
+MAC-BGITTNGER:DevOps mhussain$ ls
+Projects-Assignments
+MAC-BGITTNGER:DevOps mhussain$ pwd
+/Users/mhussain/Downloads/LambtonCollege/DevOps
+MAC-BGITTNGER:DevOps mhussain$ cd 
+.DS_Store             Projects-Assignments/ 
+MAC-BGITTNGER:DevOps mhussain$ cd 
+.DS_Store             Projects-Assignments/ 
+MAC-BGITTNGER:DevOps mhussain$ cd Projects-Assignments/
+MAC-BGITTNGER:Projects-Assignments mhussain$ ls
+assignment-3-intro-to-docker-c0950760
+MAC-BGITTNGER:Projects-Assignments mhussain$ cd assignment-3-intro-to-docker-c0950760/
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ ls
+~$cker_Assignment.docx	Docker_Assignment.pdf	html
+Docker_Assignment.docx	Dockerfile		README.md
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ git add .
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ git commit -m "Docker file and static website hosting on docker"
+[main 4d8e92f] Docker file and static website hosting on docker
+ 5 files changed, 20 insertions(+)
+ create mode 100644 Docker_Assignment.docx
+ create mode 100644 Docker_Assignment.pdf
+ create mode 100644 Dockerfile
+ create mode 100644 html/index.html
+ create mode 100644 ~$cker_Assignment.docx
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 2.11 MiB | 5.91 MiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/sheng-csd-4503/assignment-3-intro-to-docker-c0950760.git
+   36f9450..4d8e92f  main -> main
+MAC-BGITTNGER:assignment-3-intro-to-docker-c0950760 mhussain$ 
